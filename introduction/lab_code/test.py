@@ -18,8 +18,8 @@ print(data + stderr)
 import subprocess
 
 import yaml
-
-stream = open('/home/fox/test.yaml', 'r')
+safe_filename = os.path.basename('/home/fox/test.yaml')
+stream = open(safe_filename, 'r')
 data = yaml.load(stream)
 
 '''
